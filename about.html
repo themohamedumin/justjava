@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About us — JustJava</title>
-<link rel="stylesheet" href="about.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -12,14 +12,23 @@
   <div class="nav-inner">
     <a href="index.html" class="logo">JustJava</a>
 
+    <input class="mobile-menu-toggle" type="checkbox" id="mobile-menu-toggle">
+    <label class="mobile-menu-label" for="mobile-menu-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </label>
+
     <nav class="menu">
+      <label class="mobile-menu-close" for="mobile-menu-toggle" aria-label="Close navigation">
+        <span></span><span></span>
+      </label>
       <div class="nav-item has-dropdown">
-        <a href="#services">
+        <input class="services-toggle" type="checkbox" id="services-toggle">
+        <label class="services-toggle-label" for="services-toggle">
           Services
           <svg class="caret" width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-        </a>
+        </label>
         <div class="dropdown">
           <a href="index.html">Full Cycle Software Development</a>
           <a href="index.html">Revamping legacy software</a>
@@ -30,6 +39,7 @@
       <a href="DesignOS.html">DesignOS</a>
       <a href="about.html" class="current">About us</a>
       <a href="insights.html">Insights</a>
+      <button class="btn-call mobile-book">Book a call</button>
     </nav>
 
     <button class="btn-call"> Book a call</button>
@@ -197,6 +207,8 @@
   </section>
 
 </main>
+
+<script src="script.js"></script>
 
 </body>
 </html>
