@@ -190,7 +190,7 @@ nav.menu .caret{font-size:11px;opacity:.6;}
   .serve-card{
     width:300px;flex:0 0 300px;min-height:360px;border-radius:var(--radius-lg);
     padding:30px;position:relative;box-shadow:var(--shadow);
-    display:flex;flex-direction:column;
+    display:flex;flex-direction:column;overflow:hidden;
     transition:transform .35s ease, box-shadow .35s ease, z-index 0s;
   }
   .serve-card:not(:first-child){margin-left:-70px;}
@@ -807,6 +807,7 @@ nav.menu .caret{font-size:11px;opacity:.6;}
     padding:36px;font-size:20px;font-weight:600;line-height:1.5;display:flex;align-items:center;
     box-shadow:var(--shadow);
   }
+  .founder-socials img{width:22px;height:22px;display:block;object-fit:contain;}
 
   /* POD PHILOSOPHY DIAGRAM */
   section.pod-diagram{padding:90px 0 60px;position:relative;overflow:hidden;}
@@ -1223,6 +1224,9 @@ nav.menu .services-toggle-label:hover,
   .serve-card:nth-child(3){transform:rotate(-1deg);}
   .serve-card:nth-child(4){transform:rotate(2deg);}
   .serve-row .serve-card:hover{transform:none;}
+  .serve-card h3{font-size:clamp(24px,7vw,30px);overflow-wrap:anywhere;}
+  .serve-card p{overflow-wrap:anywhere;}
+  .serve-link{min-width:0;overflow-wrap:anywhere;}
   .band{grid-template-columns:1fr;gap:16px;margin-bottom:40px;}
   .band-card,.service-card,.t-card,.why-card,.phil-card,.mv-card,.value-card,
   .founder-card,.founder-quote,.step-card,.res-card{width:100%;min-width:0;}
@@ -1232,6 +1236,18 @@ nav.menu .services-toggle-label:hover,
   .footer-brand{width:100%;}
   .footer-cols{width:100%;flex-direction:column;align-items:flex-start;gap:28px;}
   .footer-col{width:100%;}
+  .cta-box{padding:48px 20px 40px;}
+  .cta-box h2{font-size:32px;line-height:1.15;margin-bottom:28px;}
+  .cta-actions{width:100%;flex-direction:column;align-items:center;gap:18px;}
+  .cta-actions .explore-link{justify-content:center;align-self:center;}
+  .cta-actions .explore-link{
+    width:max-content;max-width:100%;padding:8px 16px 8px 8px;
+    border:1px solid var(--line);border-radius:999px;background:var(--card);
+  }
+  .cta-pill{width:max-content;max-width:100%;align-self:center;justify-content:flex-start;padding-right:18px;}
+  .cta-pill .cta-text{min-width:0;overflow-wrap:anywhere;}
+  .cta-pill .cta-text small,
+  .cta-pill .cta-text strong{line-height:1.3;}
   .is-tapped{animation:mobile-card-tap .35s ease;}
 }
 
@@ -1239,4 +1255,9 @@ nav.menu .services-toggle-label:hover,
   0%{transform:translateY(0) scale(1);}
   50%{transform:translateY(-6px) scale(1.015);}
   100%{transform:translateY(0) scale(1);}
+}
+
+.explore-link{
+  padding:8px 16px 8px 8px;border:1px solid var(--line);border-radius:999px;
+  background:var(--card);box-shadow:0 10px 25px -18px rgba(20,20,60,.35);
 }
