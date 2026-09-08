@@ -46,6 +46,17 @@ header.nav{
   position:relative;
 }
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:-.02em;}
+.logo::before{
+  content:"";
+  width:30px;
+  height:30px;
+  flex-shrink:0;
+  display:inline-block;
+  background-image:url("Assets/justjava.png");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:contain;
+}
 .logo .mark{
   width:30px;height:30px;border-radius:8px;
   background:var(--grad);
@@ -1973,6 +1984,7 @@ nav.menu .caret{font-size:11px;opacity:.6;}
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
     grid-column: 2;
     grid-row: 2;
     font-size: clamp(2rem, 2.2vw, 3rem);
@@ -1981,6 +1993,7 @@ nav.menu .caret{font-size:11px;opacity:.6;}
     color: rgba(18, 20, 32, 0.75);
     min-height: 200px;
   }
+
 
   .legacy-workflows {
     padding: 70px 0 24px;
