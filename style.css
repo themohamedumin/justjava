@@ -2681,3 +2681,18 @@ nav.menu .services-toggle-label:hover,
   padding:8px 16px 8px 8px;border:1px solid var(--line);border-radius:999px;
   background:var(--card);box-shadow:0 10px 25px -18px rgba(20,20,60,.35);
 }
+
+/* Shared hero spacing keeps page starts aligned across templates. */
+section.hero,
+section.about-hero,
+section.insights-hero,
+section.process,
+.fullcycle-page > .fullcycle-hero,
+.corecare-page > .corecare-support,
+.legacy-page > .legacy-hero {
+  padding: 56px 0 36px;
+}
+
+.insights-hero .filter-bar {
+  margin-top: 40px;
+}
